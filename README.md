@@ -28,7 +28,7 @@ print("Decrypted message:", dec)
 ```
 
 # PyPi
-This prpject will soon be implemented in python.
+This project will soon be implemented in python.
 
 ## Implementation Details
 
