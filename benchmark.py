@@ -1,6 +1,15 @@
 import NTRU2
 import time
 
+"""
+This is a benchmark test to see how fast and efficient the different modes of security of the algorith is. 
+The result is the average out of the test (10 is default) and is rounded to two number after comma.
+"""
+
+#######################
+number_of_test = 10
+#######################
+
 
 def middle(num_list):
     if len(num_list) == 0:
@@ -15,8 +24,8 @@ l1 = []
 l2 = []
 l3 = []
 
-for i in range(10):
-    print(f"1. Round {i+1}/10")
+for i in range(number_of_test):
+    print(f"1. Round {i+1}/{number_of_test}")
     a = time.time()
     NTRU2.generate_keys("test", mode="moderate")
     l1.append(time.time()-a)
@@ -33,8 +42,8 @@ l11 = []
 l21 = []
 l31 = []
 
-for i in range(10):
-    print(f"2. Round {i + 1}/10")
+for i in range(number_of_test):
+    print(f"2. Round {i + 1}/{number_of_test}")
     a = time.time()
     NTRU2.generate_keys("test", mode="high")
     l11.append(time.time() - a)
@@ -51,8 +60,8 @@ l112 = []
 l212 = []
 l312 = []
 
-for i in range(10):
-    print(f"3. Round {i + 1}/10")
+for i in range(number_of_test):
+    print(f"3. Round {i + 1}/{number_of_test}")
     a = time.time()
     NTRU2.generate_keys("test", mode="highest")
     l112.append(time.time() - a)
@@ -68,17 +77,29 @@ for i in range(10):
 a1 = middle(l1)
 a2 = middle(l2)
 a3 = middle(l3)
-print(a1, a2, a3)
+print("Moderate Security:")
+print(f"Key generation: {round(a1, 2)}s")
+print(f"Encryption: {round(a2, 2)}s")
+print(f"Decryption: {round(a3, 2)}s\n")
+# print(a1, a2, a3)
 
 b1 = middle(l11)
 b2 = middle(l21)
 b3 = middle(l31)
-print(b1, b2, b3)
+print("High Security:")
+print(f"Key generation: {round(b1, 2)}s")
+print(f"Encryption: {round(b2, 2)}s")
+print(f"Decryption: {round(b3, 2)}s\n")
+# print(b1, b2, b3)
 
 c1 = middle(l112)
 c2 = middle(l212)
 c3 = middle(l312)
-print(c1, c2, c3)
+print("Highest Security:")
+print(f"Key generation: {round(c1, 2)}s")
+print(f"Encryption: {round(c2, 2)}s")
+print(f"Decryption: {round(c3, 2)}s\n")
+# print(c1, c2, c3)
 
 """   BENCHTEST
 MODERATE:
