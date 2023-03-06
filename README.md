@@ -10,22 +10,22 @@ The implementation requires the following Python packages:
 
 - NumPy
 To install these packages, you can use the following command:
-`
+```
 pip install numpy
-`
+```
 
 ## Usage
 
 To use the implementation, you can import the ntru module and use the encrypt and decrypt functions to encrypt and decrypt messages, respectively.
 
-`
+```
 import NTRU2
 
 NTRU2.generate_keys("test", mode="moderate")
 enc = NTRU2.encrypt("test", "hello world")
 dec = NTRU2.decrypt("test", enc)
 print("Decrypted message:", dec)
-`
+```
 
 # PyPi
 This prpject will soon be implemented in python.
