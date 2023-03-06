@@ -11,7 +11,7 @@ The implementation requires the following Python packages:
 - NumPy
 To install these packages, you can use the following command:
 ```
-pip install numpy
+pip install numpy sympy
 ```
 
 ## Usage
