@@ -13,21 +13,12 @@ To install these packages, you can use the following command:
 ```
 pip install numpy sympy
 ```
-
-## Usage
-
-To use the implementation, you can import the ntru module and use the encrypt and decrypt functions to encrypt and decrypt messages, respectively.
-
+You can install it with the reuirements too:
 ```
-import NTRU2
-
-NTRU2.generate_keys("test", mode="moderate")
-enc = NTRU2.encrypt("test", "hello world")
-dec = NTRU2.decrypt("test", enc)
-print("Decrypted message:", dec)
+pip install -r requirements.txt
 ```
 
-## PyPi
+## PyPi Usage
 This project can be installed with pip for easy usage.
 
 ### Installation
@@ -40,6 +31,19 @@ import pq_ntru.ntru
 pq_ntru.ntru.generate_keys("key_filename", mode="moderate")
 enc = pq_ntru.ntru.encrypt("key_filename", "message")
 dec = pq_ntru.ntru.decrypt("key_filename", enc)
+```
+
+## Other Usage
+
+To use the implementation, you can import the ntru module and use the encrypt and decrypt functions to encrypt and decrypt messages, respectively.
+
+```
+import NTRU2
+
+NTRU2.generate_keys("test", mode="moderate")
+enc = NTRU2.encrypt("test", "hello world")
+dec = NTRU2.decrypt("test", enc)
+print("Decrypted message:", dec)
 ```
 
 ## Implementation Details
