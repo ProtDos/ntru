@@ -26,11 +26,11 @@ This project can be installed with pip for easy usage.
 
 ### Usage
 ```
-import pq_ntru.ntru
+import pq_ntru
 
-pq_ntru.ntru.generate_keys("key_filename", mode="moderate")
-enc = pq_ntru.ntru.encrypt("key_filename", "message")
-dec = pq_ntru.ntru.decrypt("key_filename", enc)
+pq_ntru.generate_keys("key_filename", mode="moderate")
+enc = pq_ntru.encrypt("key_filename", "message")
+dec = pq_ntru.decrypt("key_filename", enc)
 ```
 
 ## Other Usage
