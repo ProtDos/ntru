@@ -27,8 +27,20 @@ dec = NTRU2.decrypt("test", enc)
 print("Decrypted message:", dec)
 ```
 
-# PyPi
-This project will soon be implemented in python.
+## PyPi
+This project can be installed with pip for easy usage.
+
+### Installation
+```pip install pq-ntru```
+
+### Usage
+```
+import pq_ntru.ntru
+
+pq_ntru.ntru.generate_keys("key_filename", mode="moderate")
+enc = pq_ntru.ntru.encrypt("key_filename", "message")
+dec = pq_ntru.ntru.decrypt("key_filename", enc)
+```
 
 ## Implementation Details
 
